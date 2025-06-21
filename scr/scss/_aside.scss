@@ -1,0 +1,173 @@
+@import "./variables";
+@import "./animation";
+// @import "./сontent";
+
+.layout__side-menu {
+    padding: 10px 30px;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+
+    width: 280px;
+    min-width: 280px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+
+    left: -280px;
+
+    transition: left 0.3s;
+
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 16px;
+    //background-color: #f4f4f460;
+    color: $text-color-ligth;
+
+    .nav-toggle {
+        position: absolute;
+        left: 290px;
+        top: 1em;
+        padding: 0.5em;
+
+        background: inherit;
+        color: #0d6efd;
+        cursor: pointer;
+        font-size: 1.2em;
+        line-height: 1;
+        z-index: 101;
+        transition: color .25s ease-in-out;
+    }
+
+    .side-menu__title {
+        font-size: 34px;
+        font-weight: 700;
+
+        opacity: 0.9;
+        // transform: translateX(-100%);
+        // animation: slideLeft 0.3s ease forwards;
+        // animation-play-state: paused;
+        transition: 0.5s;
+    }
+
+    .side-menu__title:hover {
+        font-size: 36px;
+        font-weight: 750;
+
+        opacity: 1;
+
+        transition: 0.5s;
+    }
+
+    .nav-menu {
+        margin-left: 25px;
+
+        .nav-menu__title {
+            font-size: 22px;
+            font-weight: 500;
+            text-decoration: underline;
+
+            transition: 0.6s;
+        }
+
+        .nav-menu__title:hover {
+            font-size: 23px !important;
+            font-weight: 550 !important;
+            transition: 0.6s;
+        }
+
+        .nav-menu__list {
+            list-style-type: none;
+
+            .nav-menu__item {
+                font-size: 18px;
+                font-weight: 300;
+                margin-top: 5px;
+
+                .nav-menu__link {
+                    text-decoration: none;
+                    color: #007bff;
+                    white-space: nowrap;
+
+                    transition: 0.4s;
+                }
+
+                .nav-menu__link:hover {
+                    color: #000b6d !important;
+                    font-size: 22px;
+                    text-decoration: underline !important;
+
+                    transition: 0.4s !important;
+                }
+            }
+        }
+    }
+}
+
+//символ бургер-меню
+.nav-toggle:after {
+    content: '\2630';
+    text-decoration: none;
+    font-size: 25px;
+
+    transition: 0.5s;
+}
+
+[id='nav-toggle']:checked~.layout__side-menu>.nav-toggle:after {
+    content: '\2715';
+    margin-right: 10px;
+    font-size: 25px;
+
+    transition: 0.5s;
+}
+
+.nav-toggle:hover {
+    color: #505050;
+
+    transition: 0.5s;
+}
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+[id='nav-toggle']:checked~.layout__side-menu>.nav-toggle {
+    left: auto;
+    right: 2px;
+    top: 1em;
+}
+
+[id='nav-toggle']:checked~.layout__side-menu {
+    left: 0;
+    box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+[id='nav-toggle']:checked~main {
+    transform: translateX(320px);
+}
+
+// @media screen and (min-width: 320px) {
+
+//     html,
+//     body {
+//         margin: 0;
+//         overflow-x: hidden;
+//     }
+// }
+
+// @media screen and (max-width: 320px) {
+
+//     html,
+//     body {
+//         margin: 0;
+//         overflow-x: hidden;
+//     }
+
+//     .layout__side-menu {
+//         width: 100%;
+//         box-shadow: none
+//     }
+// }

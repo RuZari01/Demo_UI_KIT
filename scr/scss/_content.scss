@@ -1,0 +1,101 @@
+@import "./main";
+@import "./variables";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container--main {
+
+    .header__text {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .section {
+        margin-left: 15px;
+
+
+        .btn__demo__element-1 {
+            background-color: $accent-color-ligth;
+
+            padding: 10px 20px;
+            font-size: 14px;
+
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+
+            transition: all 0.4s;
+        }
+
+        .btn__demo__element-1:hover {
+            background-color: #094cb0;
+            padding: 12px 24px;
+            font-size: 16px;
+
+            border-radius: 8px;
+
+            transition: all 0.4s !important;
+        }
+    }
+}
+
+.code-blok {
+
+    max-width: 400px;
+    width: auto;
+
+    margin-top: 20px;
+    background-color: $code-blok-color;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pre {
+        padding: 20px;
+        border-radius: 8px;
+        white-space: pre-wrap;
+        /* Перенос строки, если код длинный */
+        word-wrap: break-word;
+        text-align: left;
+        /* Текст слева, но сам блок по центру */
+        max-width: 800px;
+        /* Максимальная ширина для длинного кода */
+        width: 100%;
+        margin: 0;
+        overflow-x: auto;
+
+        .code {
+            font-size: 16px;
+        }
+    }
+}
+
+.main {}
+
+.example {}
+
+.text {
+    max-width: 330px;
+    width: auto;
+
+    background-color: rgba(207, 207, 207, 0.357);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.code_text-info {
+    margin-top: 20px;
+}
+
+.select {
+    max-width: 300px;
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}

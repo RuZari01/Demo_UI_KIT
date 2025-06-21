@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Huninn&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+//comments color
+//! Red (!)
+//? Blue (?)
+//* Green (*)
+//^ Yellow (^)
+//& Pink (&)
+//~ Purple (~)
+// Grey (//)
+
+
+.container {
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+input,
+button,
+address,
+li,
+div {
+    font-family: "Inter", sans-serif;
+}
+
+.main {
+    // max-width: 1200px;
+    // width: 100%;
+    margin-left: 50px;
+    padding: 5px 20px;
+
+    background-color: #9c9c9c17;
+
+    transition: transform 0.3s ease;
+}
+
+.copied-notification {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.copied-notification.show {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
